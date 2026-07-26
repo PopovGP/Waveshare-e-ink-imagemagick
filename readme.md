@@ -57,13 +57,13 @@ Download colortable-2.gif here: [colortable-2](colortable-2.gif)
 Convert all images in `image_folder` using this command:
 
 ```
-magick mogrify -resize 800x480 -background white -gravity center -extent 800x480 -dither FloydSteinberg 
--remap colortable-2.gif -path image_folder 
--format bmp *.jpg *.jpeg *.png *.webp
+magick mogrify -resize 800x480 -background white -gravity center -extent 800x480 -dither FloydSteinberg -remap colortable-2.gif -path image_folder -format bmp *.jpg *.jpeg *.png *.webp
 ```
 parameters:
 
 `mogrify` - mogrify is a powerful command-line utility within the ImageMagick suite used for batch processing and modifying images. Unlike the standard magick or legacy convert commands, mogrify overwrites the original files by default. It is highly efficient for editing entire directories of images simultaneously using wildcards.
+
+Download colortable-2.gif here: [colortable-2](colortable-2.gif)
 
 `-format bmp` - convert to .bmp format
 
