@@ -29,9 +29,16 @@ brew install imagemagick
 
 To convert `pic.jpeg` to `pic.bmp` use this command:
 
-``
-magick pic.jpeg -resize 800x480 -background white -gravity center -extent 800x480 -dither FloydSteinberg -remap colortable-2.gif pic.bmp
-``
+```
+magick pic.jpeg         \
+-resize 800x480         \
+-background white       \
+-gravity center         \
+-extent 800x480         \
+-dither FloydSteinberg  \
+-remap colortable-2.gif \
+pic.bmp
+```
 
 `magick` - main command
 
@@ -41,7 +48,7 @@ magick pic.jpeg -resize 800x480 -background white -gravity center -extent 800x48
 
 `-background white` - if image is smaller then fill background with white
 
-`-gravity center -extent 800x480` - this centers the original image inside a new white 800 × 600 pixel canvas
+`-gravity center -extent 800x480` - this centers the original image inside a new white 800 × 480 pixel canvas
 
 `-dither FloydSteinberg` - make Floyd-Steinberg dithering
 
@@ -57,7 +64,18 @@ Download colortable-2.gif here: [colortable-2](colortable-2.gif)
 Convert all images in `image_folder` using this command:
 
 ```
-magick mogrify -resize 800x480 -background white -gravity center -extent 800x480 -dither FloydSteinberg -remap colortable-2.gif -path image_folder -format bmp *.jpg *.jpeg *.png *.webp
+cd image_folder
+
+magick mogrify          \
+-resize 800x480         \
+-background white       \
+-gravity center         \
+-extent 800x480         \
+-dither FloydSteinberg  \
+-remap colortable-2.gif \
+-path image_folder      \
+-format bmp             \
+*.jpg *.jpeg *.png *.webp
 ```
 parameters:
 
