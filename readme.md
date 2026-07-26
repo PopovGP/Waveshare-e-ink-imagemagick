@@ -37,7 +37,7 @@ magick pic.jpeg -resize 800x480 -background white -gravity center -extent 800x48
 
 `pic.jpeg` - image to convert
 
-`-resize 800x480` - resize image to 800 pixels width and 480 pixels height 
+`-resize 800x480` - resize image to 800 pixels width and 480 pixels height, original aspect ratio is maintained
 
 `-background white` - if image is smaller then fill background with white
 
@@ -50,4 +50,24 @@ magick pic.jpeg -resize 800x480 -background white -gravity center -extent 800x48
 Download colortable-2.gif here: [colortable-2](colortable-2.gif)
 
 
+`pic.bmp` - resulting image
+
+## 2.2. Convert all images in folder
+
+Convert all images in `image_folder` using this command:
+
+```
+magick mogrify -resize 800x480 -background white -gravity center -extent 800x480 -dither FloydSteinberg 
+-remap colortable-2.gif -path image_folder 
+-format bmp *.jpg *.jpeg *.png *.webp
+```
+parameters:
+
+`mogrify` - mogrify is a powerful command-line utility within the ImageMagick suite used for batch processing and modifying images. Unlike the standard magick or legacy convert commands, mogrify overwrites the original files by default. It is highly efficient for editing entire directories of images simultaneously using wildcards.
+
+`-format bmp` - convert to .bmp format
+
+`*.jpg *.jpeg *.png *.webp` - convert from these file formats
+
+other parameters are the same as in previous section
 
