@@ -56,10 +56,27 @@ pic.bmp
 
 Download colortable-2.gif here: [colortable-2](colortable-2.gif)
 
+`pic.bmp` - resulting image
+
+### 2.1.1. Colortable-2.gif:
+
 ![colortable](colortable-2.gif)
 
+Colortable-2.gif has exactly 6 colors Waveshare e-ink display shows, with transparent background:
 
-`pic.bmp` - resulting image
+* BLACK   = 0x000000  
+
+* WHITE  = 0xffffff  
+
+* YELLOW = 0x00ffff  
+
+* RED    = 0x0000ff  
+
+* BLUE   = 0xff0000   
+
+* GREEN  = 0x00ff00   
+
+
 
 ## 2.2. Convert all images in folder
 
