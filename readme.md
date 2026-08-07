@@ -89,3 +89,49 @@ Download colortable-2.gif here: [colortable-2](colortable-2.gif)
 
 other parameters are the same as in previous section
 
+
+## Fox Samples
+
+[https://en.wikipedia.org/wiki/The_Foxes_(Marc)](https://en.wikipedia.org/wiki/The_Foxes_(Marc))
+
+Original image:
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Franz_Marc_-_The_Foxes_-_Google_Art_Project.jpg" alt="Franz Mark The Foxes" width="50%"  loading="lazy">
+</br>
+
+You can use two different dithering methods - Floyd-Steinberg and Riemersma
+
+Try yourself and select wich is better:
+
+### For Floyd-Steinberg Dither
+```
+magick foxes.jpg        \
+-resize 800x480         \
+-background white       \
+-gravity center         \
+-extent 800x480         \
+-dither FloydSteinberg  \
+-remap colortable-2.gif \
+foxes_FloydSteinberg.bmp
+```
+Floyd-Steinberg:
+
+<img src="foxes/foxes_FloydSteinberg.bmp" alt="Franz Mark The Foxes" loading="lazy">
+</br>
+
+
+### For Riemersma Dither
+```
+magick foxes.jpg        \
+-resize 800x480         \
+-background white       \
+-gravity center         \
+-extent 800x480         \
+-dither Riemersma       \
+-remap colortable-2.gif \
+foxes_Riemersma.bmp
+```
+Riemersma:
+
+<img src="foxes_Riemersma.bmp" alt="Franz Mark The Foxes" loading="lazy">
+</br>
