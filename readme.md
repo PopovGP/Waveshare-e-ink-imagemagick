@@ -56,6 +56,8 @@ pic.bmp
 
 Download colortable-2.gif here: [colortable-2](colortable-2.gif)
 
+![colortable](colortable-2.gif)
+
 
 `pic.bmp` - resulting image
 
