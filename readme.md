@@ -133,5 +133,5 @@ foxes_Riemersma.bmp
 ```
 Riemersma:
 
-<img src="foxes_Riemersma.bmp" alt="Franz Mark The Foxes" loading="lazy">
+<img src="foxes/foxes_Riemersma.bmp" alt="Franz Mark The Foxes" loading="lazy">
 </br>
